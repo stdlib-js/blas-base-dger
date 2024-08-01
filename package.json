@@ -52,10 +52,10 @@
     "@stdlib/utils-try-require": "^0.2.2"
   },
   "devDependencies": {
-    "@stdlib/array-float64": "^0.2.1",
-    "@stdlib/array-zeros": "^0.2.1",
+    "@stdlib/array-float64": "^0.2.2",
+    "@stdlib/array-zeros": "^0.2.2",
     "@stdlib/assert-is-browser": "^0.2.2",
-    "@stdlib/blas-base-layout-resolve-enum": "^0.0.1",
+    "@stdlib/blas-base-layout-resolve-enum": "^0.0.2",
     "@stdlib/random-array-discrete-uniform": "^0.2.1",
     "@stdlib/strided-base-min-view-buffer-index": "^0.2.2",
     "@stdlib/strided-base-offset-view": "^0.2.2",
