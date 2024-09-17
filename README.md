@@ -50,7 +50,7 @@ TODO
 ## Usage
 
 ```javascript
-import dger from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dger@deno/mod.js';
+import dger from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dger@v0.0.1-deno/mod.js';
 ```
 
 #### TODO
