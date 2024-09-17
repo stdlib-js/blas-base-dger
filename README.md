@@ -50,6 +50,11 @@ TODO
 ## Usage
 
 ```javascript
+import dger from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dger@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/blas-base-dger/tags). For example,
+
+```javascript
 import dger from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dger@v0.0.1-esm/index.mjs';
 ```
 
