@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-06-30)
+## Unreleased (2025-07-01)
 
 <section class="features">
 
@@ -34,6 +34,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`53cb5ce`](https://github.com/stdlib-js/stdlib/commit/53cb5cec01d65b42bccee658c7ed3bd1d6b7c441) - **docs:** fix data type [(#7536)](https://github.com/stdlib-js/stdlib/pull/7536) _(by Shabareesh Shetty)_
 -   [`231adcc`](https://github.com/stdlib-js/stdlib/commit/231adcca7fe97378ed76193faba8ccf41123ad83) - **feat:** add JavaScript implementation and clean-up `blas/base/dger` [(#6395)](https://github.com/stdlib-js/stdlib/pull/6395) _(by Shabareesh Shetty, Athan Reines, stdlib-bot)_
 -   [`576b85b`](https://github.com/stdlib-js/stdlib/commit/576b85bb15cbf83346f8f100e48acf573ac1fcfe) - **chore:** fix C lint errors [(#7033)](https://github.com/stdlib-js/stdlib/pull/7033) _(by Uday Kakade)_
 -   [`ed44fee`](https://github.com/stdlib-js/stdlib/commit/ed44feecb9eaa5e0849d1a533e5415624d0aa338) - **style:** use imperative in package.json description and end with period _(by Philipp Burckhardt)_
