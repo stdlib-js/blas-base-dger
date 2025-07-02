@@ -34,6 +34,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`a1d90a8`](https://github.com/stdlib-js/stdlib/commit/a1d90a8485273025956d41831ed12e423032f580) - **docs:** fix descriptions _(by Athan Reines)_
 -   [`01f149a`](https://github.com/stdlib-js/stdlib/commit/01f149a97d76b4e8e14353d87f4dbabca338f5a1) - **docs:** fix typo _(by Athan Reines)_
 -   [`8992c1c`](https://github.com/stdlib-js/stdlib/commit/8992c1c7183ba70421f329143f2524de124ad301) - **docs:** update type _(by Athan Reines)_
 -   [`53cb5ce`](https://github.com/stdlib-js/stdlib/commit/53cb5cec01d65b42bccee658c7ed3bd1d6b7c441) - **docs:** fix data type [(#7536)](https://github.com/stdlib-js/stdlib/pull/7536) _(by Shabareesh Shetty)_
