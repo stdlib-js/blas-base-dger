@@ -41,38 +41,32 @@ limitations under the License.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/blas-base-dger
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-dger = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dger@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var dger = require( 'path/to/vendor/umd/blas-base-dger/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dger@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.dger;
-})();
-</script>
+var dger = require( '@stdlib/blas-base-dger' );
 ```
 
 #### dger( ord, M, N, α, x, sx, y, sy, A, lda )
@@ -192,14 +186,9 @@ dger.ndarray( 2, 3, 1.0, x, 2, 1, y, 2, 1, A, 1, 2, 2 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dger@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var discreteUniform = require( '@stdlib/random-array-discrete-uniform' );
+var dger = require( '@stdlib/blas-base-dger' );
 
 var opts = {
     'dtype': 'float64'
@@ -218,11 +207,6 @@ console.log( A );
 dger.ndarray( M, N, 1.0, x, 1, 0, y, 1, 0, A, 1, M, 0 );
 console.log(A);
 
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -231,7 +215,167 @@ console.log(A);
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/blas/base/dger.h"
+```
+
+#### c_dger( layout, M, N, alpha, \*X, strideX, \*Y, strideY, \*A, LDA )
+
+Performs the rank 1 operation `A = alpha*x*y^T + A`, where `alpha` is a scalar, `x` is an `M` element vector, `y` is an `N` element vector, and `A` is an `M`-by-`N` matrix.
+
+```c
+#include "stdlib/blas/base/shared.h"
+
+double A[ 3*4 ] = {
+   0.0, 0.0, 0.0, 0.0,
+   0.0, 0.0, 0.0, 0.0,
+   0.0, 0.0, 0.0, 0.0
+};
+
+const double x[ 3 ] = { 1.0, 4.0, 0.0 };
+const double y[ 4 ] = { 0.0, 1.0, 2.0, 3.0 };
+
+c_dger( CblasRowMajor, 3, 4, 1.0, x, 1, y, 1, A, 4 );
+```
+
+The function accepts the following arguments:
+
+-   **layout**: `[in] CBLAS_LAYOUT` storage layout.
+-   **M**: `[in] CBLAS_INT` number of rows in the matrix `A`.
+-   **N**: `[in] CBLAS_INT` number of columns in the matrix `A`.
+-   **alpha**: `[in] double` scalar constant.
+-   **X**: `[in] double*` an `M` element vector.
+-   **strideX**: `[in] CBLAS_INT` stride length for `X`.
+-   **Y**: `[in] double*` an `N` element vector.
+-   **strideY**: `[in] CBLAS_INT` stride length for `Y`.
+-   **A**: `[inout] double*` input matrix.
+-   **LDA**: `[in] CBLAS_INT` stride of the first dimension of `A` (a.k.a., leading dimension of the matrix `A`).
+
+```c
+void c_dger( const CBLAS_LAYOUT layout, const CBLAS_INT M, const CBLAS_INT N, const double alpha, const double *X, const CBLAS_INT strideX, const double *Y, const CBLAS_INT strideY, double *A, const CBLAS_INT LDA );
+```
+
+#### c_dger_ndarray( M, N, alpha, \*X, sx, ox, \*Y, sy, oy, \*A, sa1, sa2, oa )
+
+Performs the rank 1 operation `A = alpha*x*y^T + A`, using alternative indexing semantics and where `alpha` is a scalar, `x` is an `M` element vector, `y` is an `N` element vector, and `A` is an `M`-by-`N` matrix.
+
+```c
+#include "stdlib/blas/base/shared.h"
+
+double A[ 3*4 ] = {
+   0.0, 0.0, 0.0, 0.0,
+   0.0, 0.0, 0.0, 0.0,
+   0.0, 0.0, 0.0, 0.0
+};
+
+const double x[ 3 ] = { 1.0, 4.0, 0.0 };
+const double y[ 4 ] = { 0.0, 1.0, 2.0, 3.0 };
+
+c_dger_ndarray( 3, 4, 1.0, x, 1, 0, y, 1, 0, A, 4, 1, 0 );
+```
+
+The function accepts the following arguments:
+
+-   **layout**: `[in] CBLAS_LAYOUT` storage layout.
+-   **M**: `[in] CBLAS_INT` number of rows in the matrix `A`.
+-   **N**: `[in] CBLAS_INT` number of columns in the matrix `A`.
+-   **alpha**: `[in] double` scalar constant.
+-   **X**: `[in] double*` an `M` element vector.
+-   **sx**: `[in] CBLAS_INT` stride length for `X`.
+-   **ox**: `[in] CBLAS_INT` starting index for `X`.
+-   **Y**: `[in] double*` an `N` element vector.
+-   **sy**: `[in] CBLAS_INT` stride length for `Y`.
+-   **oy**: `[in] CBLAS_INT` starting index for `Y`.
+-   **A**: `[inout] double*` input matrix.
+-   **sa1**: `[in] CBLAS_INT` stride of the first dimension of `A`.
+-   **sa2**: `[in] CBLAS_INT` stride of the second dimension of `A`.
+-   **oa**: `[in] CBLAS_INT` starting index for `A`.
+
+```c
+void c_dger( onst CBLAS_INT M, const CBLAS_INT N, const double alpha, const double *X, const CBLAS_INT strideX, const CBLAS_INT offsetX, const double *Y, const CBLAS_INT strideY, const CBLAS_INT offsetY, double *A, const CBLAS_INT strideA1, const CBLAS_INT strideA2, const CBLAS_INT offsetA );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/blas/base/dger.h"
+#include "stdlib/blas/base/shared.h"
+#include <stdio.h>
+
+int main( void ) {
+   // Define a 3x4 matrix stored in row-major order:
+   double A[ 3*4 ] = {
+      0.0, 0.0, 0.0, 0.0,
+      0.0, 0.0, 0.0, 0.0,
+      0.0, 0.0, 0.0, 0.0
+   };
+   // Define `x` and `y^T` vectors:
+   const double x[ 3 ] = { 1.0, 4.0, 0.0 };      // M
+   const double y[ 4 ] = { 0.0, 1.0, 2.0, 3.0 }; // N
+
+   // Specify the number of rows and columns:
+   const int M = 3;
+   const int N = 4;
+
+   // Specify stride lengths:
+   const int strideX = 1;
+   const int strideY = 1;
+
+   // Perform operation:
+   c_dger( CblasRowMajor, M, N, 1.0, x, strideX, y, strideY, A, N );
+
+   // Print the result:
+   for ( int i = 0; i < M; i++ ) {
+      for ( int j = 0; j < N; j++ ) {
+         printf( "A[%i,%i] = %lf\n", i, j, A[ (i*N)+j ] );
+      }
+   }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
