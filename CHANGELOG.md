@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-07-02)
+## Unreleased (2025-07-18)
 
 <section class="features">
 
@@ -15,6 +15,17 @@
 </section>
 
 <!-- /.features -->
+
+<section class="bug-fixes">
+
+### Bug Fixes
+
+-   [`5986aa6`](https://github.com/stdlib-js/stdlib/commit/5986aa661893a77a297c0aa18b44f6f58d93c948) - use correct number of elements for X
+-   [`d76695b`](https://github.com/stdlib-js/stdlib/commit/d76695b21bc8a799580c3a0acde2b22501b11f92) - update error check and messages
+
+</section>
+
+<!-- /.bug-fixes -->
 
 <section class="issues">
 
@@ -34,6 +45,13 @@ This release closes the following issue:
 
 <details>
 
+-   [`ade0259`](https://github.com/stdlib-js/stdlib/commit/ade02597cebc6c28007b5082d28abcf73c076e57) - **style:** remove leading empty line _(by Philipp Burckhardt)_
+-   [`92d4b33`](https://github.com/stdlib-js/stdlib/commit/92d4b337fe0f7aed4e2adaeb57da42ec639cff38) - **docs:** fix descriptions _(by Athan Reines)_
+-   [`1070a84`](https://github.com/stdlib-js/stdlib/commit/1070a840f5b25d142478ca21fce3109dd0dfc983) - **bench:** fix random value generation _(by Athan Reines)_
+-   [`7ec74ef`](https://github.com/stdlib-js/stdlib/commit/7ec74ef82dc2c2442729e5ec84073d61d8501c84) - **docs:** avoid using JS strict equality operators in C comments _(by Philipp Burckhardt)_
+-   [`5986aa6`](https://github.com/stdlib-js/stdlib/commit/5986aa661893a77a297c0aa18b44f6f58d93c948) - **fix:** use correct number of elements for X _(by Philipp Burckhardt)_
+-   [`d76695b`](https://github.com/stdlib-js/stdlib/commit/d76695b21bc8a799580c3a0acde2b22501b11f92) - **fix:** update error check and messages _(by Philipp Burckhardt)_
+-   [`edcb3f2`](https://github.com/stdlib-js/stdlib/commit/edcb3f2cf5f9e4d724c842416aca70a210a7eb51) - **docs:** fix parameter name in Doxygen comment and error messages _(by Philipp Burckhardt)_
 -   [`a2f0378`](https://github.com/stdlib-js/stdlib/commit/a2f0378a76569c79599c550b781a1dc96a935f76) - **docs:** use consistent capitalization _(by Athan Reines)_
 -   [`a1d90a8`](https://github.com/stdlib-js/stdlib/commit/a1d90a8485273025956d41831ed12e423032f580) - **docs:** fix descriptions _(by Athan Reines)_
 -   [`01f149a`](https://github.com/stdlib-js/stdlib/commit/01f149a97d76b4e8e14353d87f4dbabca338f5a1) - **docs:** fix typo _(by Athan Reines)_
