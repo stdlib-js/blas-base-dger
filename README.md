@@ -48,7 +48,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import dger from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dger@esm/index.mjs';
+import dger from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dger@v0.1.0-esm/index.mjs';
 ```
 
 #### dger( ord, M, N, α, x, sx, y, sy, A, lda )
@@ -175,7 +175,7 @@ dger.ndarray( 2, 3, 1.0, x, 2, 1, y, 2, 1, A, 1, 2, 2 );
 <script type="module">
 
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-discrete-uniform@esm/index.mjs';
-import dger from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dger@esm/index.mjs';
+import dger from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-dger@v0.1.0-esm/index.mjs';
 
 var opts = {
     'dtype': 'float64'
