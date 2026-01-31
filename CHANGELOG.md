@@ -2,9 +2,9 @@
 
 > Package changelog.
 
-<section class="release" id="unreleased">
+<section class="release" id="v0.1.0">
 
-## Unreleased (2025-07-18)
+## 0.1.0 (2026-01-31)
 
 <section class="features">
 
@@ -45,6 +45,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`11f3cfa`](https://github.com/stdlib-js/stdlib/commit/11f3cfa5a658d7cb105aeb2578b7d72ea62f1e97) - **refactor:** update include header guards for double precision real packages [(#7711)](https://github.com/stdlib-js/stdlib/pull/7711) _(by Shabareesh Shetty)_
 -   [`ade0259`](https://github.com/stdlib-js/stdlib/commit/ade02597cebc6c28007b5082d28abcf73c076e57) - **style:** remove leading empty line _(by Philipp Burckhardt)_
 -   [`92d4b33`](https://github.com/stdlib-js/stdlib/commit/92d4b337fe0f7aed4e2adaeb57da42ec639cff38) - **docs:** fix descriptions _(by Athan Reines)_
 -   [`1070a84`](https://github.com/stdlib-js/stdlib/commit/1070a840f5b25d142478ca21fce3109dd0dfc983) - **bench:** fix random value generation _(by Athan Reines)_
