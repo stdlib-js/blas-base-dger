@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-08-07)
+## Unreleased (2026-08-09)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`3208321`](https://github.com/stdlib-js/stdlib/commit/320832192c8d32b18d24c7342ba1cf03cc5affea) - **bench:** refactor to use dynamic memory allocation [(#14099)](https://github.com/stdlib-js/stdlib/pull/14099) _(by Philipp Burckhardt, Athan Reines)_
 -   [`f19d370`](https://github.com/stdlib-js/stdlib/commit/f19d370e0a194ac8ffed4916f8b8b51ecfe5896f) - **chore:** clean-up [(#14016)](https://github.com/stdlib-js/stdlib/pull/14016) _(by Philipp Burckhardt)_
 -   [`7800c9a`](https://github.com/stdlib-js/stdlib/commit/7800c9a717853e6fc12795832bc4c34c06b2ef95) - **test:** fix grammar of test descriptions in `blas/base/dger` [(#12242)](https://github.com/stdlib-js/stdlib/pull/12242) _(by Divit Jain)_
 -   [`d3f62b1`](https://github.com/stdlib-js/stdlib/commit/d3f62b1dc6a274e004e047928832ce378798768a) - **bench:** use string interpolation in `blas/base/dger` [(#10292)](https://github.com/stdlib-js/stdlib/pull/10292) _(by Om-A-osc)_
@@ -26,8 +27,9 @@
 
 ### Contributors
 
-A total of 3 people contributed to this release. Thank you to the following contributors:
+A total of 4 people contributed to this release. Thank you to the following contributors:
 
+-   Athan Reines
 -   Divit Jain
 -   Om-A-osc
 -   Philipp Burckhardt
