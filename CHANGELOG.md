@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-09-26)
+## Unreleased (2026-11-03)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`78ad2fa`](https://github.com/stdlib-js/stdlib/commit/78ad2fa5dbb12ce808dec93197d5343745ff91b8) - **docs:** normalize trailing newlines in REPL help texts [(#16420)](https://github.com/stdlib-js/stdlib/pull/16420) _(by Philipp Burckhardt)_
 -   [`3208321`](https://github.com/stdlib-js/stdlib/commit/320832192c8d32b18d24c7342ba1cf03cc5affea) - **bench:** refactor to use dynamic memory allocation [(#14099)](https://github.com/stdlib-js/stdlib/pull/14099) _(by Philipp Burckhardt, Athan Reines)_
 -   [`f19d370`](https://github.com/stdlib-js/stdlib/commit/f19d370e0a194ac8ffed4916f8b8b51ecfe5896f) - **chore:** clean-up [(#14016)](https://github.com/stdlib-js/stdlib/pull/14016) _(by Philipp Burckhardt)_
 -   [`7800c9a`](https://github.com/stdlib-js/stdlib/commit/7800c9a717853e6fc12795832bc4c34c06b2ef95) - **test:** fix grammar of test descriptions in `blas/base/dger` [(#12242)](https://github.com/stdlib-js/stdlib/pull/12242) _(by Divit Jain)_
